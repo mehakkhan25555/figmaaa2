@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma</title>
+    <link href="style.css" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <div class="navdiv">
+            <button class="btn">
+       <div class="logo" ><img src="images/Vector.svg"></div>
+       <h3>Resume</h3>
+    </button>
+       <div class="home"><img src="images/home.svg"></div>
+       <ul>
+        <button class="arrows">
+        <li><a href="#"><img src="images/Group 20.svg"></a></li>
+        <li><a  href="#"><img src="images/Group 19.svg"></a></li>
+    </button>
+        <button class="En">
+        <div><a href=""><img src="images/en.svg" style="padding-right: 2px;font-size: 10px;"></a></div>
+            <h4 style="padding-right: 4px;">EN</h4>
+            <div><a href=""><img src="images/down.svg" style="margin-top: -4px;" ></a></div>
+        </button>
+        <button class="Import"> 
+                 <li><a href=""><img src="images/Impoet Button.svg" style="width: 21px;
+                    height: 24px;"></a></li>
+                <p>Import</p>
+            </button>
+            <button class="download"> 
+                <li><a href=""><img src="images/download.svg" style="width: 19px;
+                    height: 16px;padding-right: 4px;margin-top: 2px;"></a></li>
+               <h5>Download</h5>
+           </button>
+       </ul>
+       
+         
+</div>
+         
+    </nav>
+    
+    <div class="vl"></div>
+
+    <div class="covr">
+        <div class="container">
+            <div class="row1">
+              <div class="label-button-container">
+                <h1 data-form="personal" onclick="toggleForm('personal')" style="text-decoration: underline;margin-top: 102px; padding-bottom: 10px">Personal details</h1>
+                <button class="button" id="dropdown" onclick="toggleForm('personal')"><img src="images/dropDown.svg" style="margin-top: 54px;" alt="Dropdown"></button>
+              </div>
+              <hr class="separator">
+            </div>
+            <form id="personalForm" class="form">
+              <div class="mys">
+              <div id="photoContainer">
+                
+                  <div class="upload">
+                    <img src="images/user.jpg" width=140 height=140 alt=""> 
+                    
+                    <div class="round">
+                      <input type="file" id="photoUpload" name="photoUpload" accept="image/*">
+                     <i class="fa fa-camera" style="color:#fff;" ></i>
+                    </div>
+                  </div>
+               
+
+              </div>
+              
+            <div class="user-details">
+               <!-- <label for="firstName "style="margin-top: 10px;">FirstName:</label><br> -->
+              
+             <span>FirstName <input type="text" id="firstName" name="firstName"style="margin-right:7px;"required></span>
+             
+              <!-- <label for="lastName" style="margin-top: 10px; ">LastName:</label> -->
+             
+             <span>LastName <input type="text" id="lastName" name="lastName" style="background-color: grey; "required></span>
+            
+              </div>
+            </div>
+           
+          
+             
+             <div class="email">
+               <!-- <label>Email</label> -->
+              <span>  Email: </span>
+              <input type="email" id="email"  name="email" style="background-color: grey;border-radius: 5px;"required>
+            </div>
+            
+            <br>
+            <br>
+              <label for="phone" id="phone">Phone Number:</label>
+              <input type="tel" id="phoneno" name="phone" required>
+          
+              <label for="dob" style="margin-top: 5px;">Date of Birth:</label>
+              <input type="date" id="dob" name="dob"style="width:247px; height:25.5px;background-color: grey;border:none;border-radius: 5px;"  required>
+              <span><select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select></span>
+
+         <label for="gender" id="gender1" >Gender:</label>
+          
+              <label for="address" style="margin-top: 5px;">Address:</label>
+              <textarea id="address"style="width:545px; height:50px;background-color: grey;border:none;border-radius: 5px;" name="address" rows="4" required></textarea>
+          
+              
+          
+              <label for="interests">Interests:</label>
+              <input type="text" style=" width:545px;
+              height:25px;
+              background-color: grey;
+              border: none;border-radius: 5px;"id="interests" name="interests">
+          
+              <label for="subscribe">Subscribe to newsletter:</label>
+              <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+          
+              <input type="submit" value="Submit"style="background-color:#A053CF;padding:8px 8px;border:none;border-radius:10px;color:white"> 
+            </form>
+          
+
+
+
+            <div class="row">
+              <div class="label-button-container">
+                <h1 data-form="educational" onclick="toggleForm('educational')" style="text-decoration: underline;">Educational details</h1>
+                <button class="button" onclick="toggleForm('educational')">   <img src="images/dropDown.svg" style=" height:20px;
+                  width:35px;"alt="Dropdown"></button>
+              </div>
+              <hr class="separator">
+            </div>
+            <form id="educationalForm" class="form">
+              <!-- Educational details form content goes here -->
+              Educational details form
+            </form>
+          
+            <div class="row">
+              <div class="label-button-container">
+                <h1 data-form="employment" onclick="toggleForm('employment')" style="text-decoration: underline;">Employment details</h1>
+                <button class="button" onclick="toggleForm('employment')"><img src="images/dropDown.svg" style=" height:20px;
+                  width:35px;"alt="Dropdown"></button>
+              </div>
+              <hr class="separator">
+            </div>
+            <form id="employmentForm" class="form">
+              <!-- Employment details form content goes here -->
+              Employment details form
+            </form>
+          
+            <div class="row">
+              <button class="vertical-button" onclick="toggleForm('vertical')">Download</button>
+            </div>
+            <form id="verticalForm" class="form">
+               <!-- Vertical button form content goes here -->
+               Vertical Button form 
+            </form>
+          </div> 
+          
+          <script>
+            function toggleForm(formType) {
+              var form = document.getElementById(`${formType}Form`);
+              form.classList.toggle('active-form');
+          
+              var h1 = document.querySelector(`h1[data-form="${formType}"]`);
+              h1.classList.toggle('active-h1', form.classList.contains('active-form'));
+            }
+          </script>
+    
+    <div class="paper" >
+       
+       
+    </div>
+  
+       
+    
+        
+    </div>
+    
+    
+        
+    </body>
+    </html>
+    
+</body>
+</html>
